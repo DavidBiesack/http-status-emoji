@@ -10,11 +10,15 @@ function render {
     rsvg-convert -h 48 gen/$code.svg >| gen/$code.png
 }
 
-# the SVG templates (2xx.svg, 4xx.svg, 5xx.svg) were derived from rest.codes,
-# but modified to make the text larger so they render better in Slack
-# style: plastic or rounded or flat
-# image: code or square or full
-# https://rest.codes/plastic/code/$code.svg
+# the status-code.svg SVG template and colors were derived from rest.codes,
+# https://github.com/ahmadnassri/rest-codes via
+# https://rest.codes/plastic/code/100.svg
+# https://rest.codes/plastic/code/200.svg
+# https://rest.codes/plastic/code/300.svg
+# https://rest.codes/plastic/code/400.svg
+# https://rest.codes/plastic/code/500.svg
+# I modified the SVG to make the text larger so they render better as emoji in Slack
+# (i.e. :200: or :409:)
 
 test -s gen || mkdir gen
 for code in {100..103}
@@ -24,7 +28,7 @@ done
 
 for code in {200..202} {204..208} 226
 do
-    render 2xx $code 4c1
+    render 2xx $code 4C1
 done
 
 for code in {300..308}
