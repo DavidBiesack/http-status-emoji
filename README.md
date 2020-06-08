@@ -1,8 +1,8 @@
 ## http-status-emoji
 
-Why reply on Slack with just "*ok*" when you can reply with ![200 OK](gen/200.png "200 OK") instead!
+Why reply on Slack with just "*ok*" when you can reply with ![200 OK](gen/200.png "200 OK") instead!?!
 
-This project contains script to generate HTTP status code icons or emoji; useful for uploading to
+This project contains a script to generate HTTP status code icons or emoji; useful for uploading to
 a Slack instance if you are geek/API/REST/HTTP inclined.
 
 The script is a bash sell script, `gen-status-code-icons.sh`. Run it to generate the icons in `gen`.
